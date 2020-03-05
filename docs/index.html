@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Source Code Description &#8212; faq_bot  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="source-code-description">
+<h1>Source Code Description<a class="headerlink" href="#source-code-description" title="Permalink to this headline">¶</a></h1>
+<p>Heroku automatically runs jobs defined in Procfile after deployment. The FAQ bot’s Procfile initializes the environment and runs main.py to run daemons.</p>
+<p>In this section, we’ll describe functions using APIs in the FAQ bot.</p>
+<p>Example) The source code of faq_bot.externals.contacts.get_account_info is in the get_account_info function in faq_bot/externals/contacts.py.</p>
+<div class="section" id="development-language-and-environment">
+<h2>Development Language and Environment<a class="headerlink" href="#development-language-and-environment" title="Permalink to this headline">¶</a></h2>
+<p>The following shows the required development environment and language:</p>
+<ul class="simple">
+<li><p>Python3</p></li>
+<li><p>Tornado framework</p></li>
+</ul>
+</div>
+<div class="section" id="procfile">
+<h2>Procfile<a class="headerlink" href="#procfile" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://devcenter.heroku.com/articles/procfile">https://devcenter.heroku.com/articles/procfile</a>:</p>
+<blockquote>
+<div><p>Heroku apps include a Procfile that specifies the commands that are executed by the app on startup. You can use a Procfile to declare a variety of process types, including:
+- Your app’s web server
+- Multiple types of worker processes
+- A singleton process, such as a clock
+- Tasks to run before a new release is deployed</p>
+</div></blockquote>
+<p>This bot’s Procfile:</p>
+<div class="literal-block-wrapper docutils container" id="id30">
+<div class="code-block-caption"><span class="caption-text">Procfile</span><a class="headerlink" href="#id30" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>web: python main.py --port=$PORT
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="run-bot">
+<h2>Run bot<a class="headerlink" href="#run-bot" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id31">
+<div class="code-block-caption"><span class="caption-text">main.py</span><a class="headerlink" href="#id31" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/env python</span>
+<span class="c1"># -*- encoding: utf-8 -*-</span>
+
+<span class="c1"># from gevent import monkey</span>
+<span class="c1"># monkey.patch_all()</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">main function for faq_bot</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">signal</span>
+<span class="kn">from</span> <span class="nn">daemonize</span> <span class="k">import</span> <span class="n">Daemonize</span>
+<span class="kn">from</span> <span class="nn">tornado.options</span> <span class="k">import</span> <span class="n">define</span><span class="p">,</span> <span class="n">options</span>
+<span class="kn">from</span> <span class="nn">faq_bot.faq_bot</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">faq_bot.settings</span> <span class="k">import</span> <span class="o">*</span>
+
+
+<span class="n">define</span><span class="p">(</span><span class="s2">&quot;daemonize&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;daemon mode&quot;</span><span class="p">)</span>
+<span class="n">define</span><span class="p">(</span><span class="s2">&quot;pidfile&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">CALENDAR_PID_FILE</span><span class="p">,</span>
+       <span class="n">help</span><span class="o">=</span><span class="s2">&quot;the path of pid file, default None&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">options</span><span class="o">.</span><span class="n">parse_command_line</span><span class="p">()</span>
+
+    <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGPIPE</span><span class="p">,</span> <span class="n">signal</span><span class="o">.</span><span class="n">SIG_IGN</span><span class="p">)</span>
+    <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">sig_handler</span><span class="p">)</span>
+    <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGQUIT</span><span class="p">,</span> <span class="n">sig_handler</span><span class="p">)</span>
+    <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGTERM</span><span class="p">,</span> <span class="n">sig_handler</span><span class="p">)</span>
+    <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGHUP</span><span class="p">,</span> <span class="n">sig_handler</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">options</span><span class="o">.</span><span class="n">daemonize</span><span class="p">:</span>
+        <span class="n">daemon</span> <span class="o">=</span> <span class="n">Daemonize</span><span class="p">(</span><span class="n">app</span><span class="o">=</span><span class="s2">&quot;faq_bot&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="n">start_faq_bot</span><span class="p">,</span>
+                           <span class="n">pid</span><span class="o">=</span><span class="n">options</span><span class="o">.</span><span class="n">pidfile</span><span class="p">)</span>
+        <span class="n">daemon</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">start_faq_bot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.faq_bot.</code><code class="sig-name descname">start_faq_bot</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>the faq_bot launch code</p>
+<p>tornado.httpserver a non-blocking, single-threaded HTTP server.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://www.tornadoweb.org/en/stable/httpserver.html">Common Message Property</a></p>
+</div></blockquote>
+<p>tornado.routing flexible routing implementation.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://www.tornadoweb.org/en/stable/routing.html">Common Message Property</a></p>
+</div></blockquote>
+<p>If you use the event loop that comes with tornado, many third-party
+packages based on asyncio may not be used, such as aioredis.</p>
+<p>Message bot API overview.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/3005001?lang=en">Common Message Property</a></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.router.</code><code class="sig-name descname">getRouter</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>get the app with route info</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://www.tornadoweb.org/en/stable/web.html">Common Message Property</a></p>
+</div></blockquote>
+<p>StaticFileHandler is a simple handler that can serve static content
+from a directory.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://www.tornadoweb.org/en/stable/web.html#tornado.web.StaticFileHandler">Common Message Property</a></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">faq_bot.callbackHandler.</code><code class="sig-name descname">CallbackHandler</code><span class="sig-paren">(</span><em class="sig-param">application</em>, <em class="sig-param">request</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Process business requests of users.</p>
+<p>tornado.web.RequestHandler base class for HTTP request handlers.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://www.tornadoweb.org/en/stable/web.html">Common Message Property</a></p>
+</div></blockquote>
+<dl class="method">
+<dt>
+<code class="sig-name descname">post</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Implement the handle to corresponding HTTP method.
+Check also: faq_bot/router.py</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">faq_bot.check_and_handle_actions.</code><code class="sig-name descname">CheckAndHandleActions</code></dt>
+<dd><p>Factory used to create handler and execute handler.</p>
+<dl class="method">
+<dt>
+<code class="sig-name descname">execute</code><span class="sig-paren">(</span><em class="sig-param">body</em><span class="sig-paren">)</span></dt>
+<dd><p>Verify the body parameter and execute handler.
+Please refer to the reference link of the function.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500901?lang=en">Common Message Property</a></p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="register-bot">
+<h3>Register bot<a class="headerlink" href="#register-bot" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="bot-api-functions">
+<h2>Bot API functions<a class="headerlink" href="#bot-api-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_text</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">i18n_texts=None</em><span class="sig-paren">)</span></dt>
+<dd><p>make text.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500801?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>text content.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_quick_reply</code><span class="sig-paren">(</span><em class="sig-param">replay_items</em><span class="sig-paren">)</span></dt>
+<dd><p>Create quick reply message.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500807?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>replay_items</strong> – Array of return object of make_quick_reply_item function.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>quick reply content.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_carousel</code><span class="sig-paren">(</span><em class="sig-param">columns</em>, <em class="sig-param">ratio=None</em>, <em class="sig-param">size=None</em><span class="sig-paren">)</span></dt>
+<dd><p>create carousel message content.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500808?lang=en">Common Message Property</a></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_list_template</code><span class="sig-paren">(</span><em class="sig-param">elements</em>, <em class="sig-param">cover_data=None</em>, <em class="sig-param">actions=None</em><span class="sig-paren">)</span></dt>
+<dd><p>create carousel list template.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500805?lang=en">Common Message Property</a></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.externals.send_message.</code><code class="sig-name descname">push_message</code><span class="sig-paren">(</span><em class="sig-param">account_id</em>, <em class="sig-param">content</em>, <em class="sig-param">header=None</em><span class="sig-paren">)</span></dt>
+<dd><p>Send message to user. the package is the following JSON structure.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/1005008?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>account_id</strong> – user account id</p></li>
+<li><p><strong>content</strong> – message content</p></li>
+<li><p><strong>header</strong> – http header</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="home-api-functions">
+<h2>Home API functions<a class="headerlink" href="#home-api-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.externals.home.</code><code class="sig-name descname">create_boards</code><span class="sig-paren">(</span><em class="sig-param">board</em><span class="sig-paren">)</span></dt>
+<dd><p>Create boards.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100180201?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>board no</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.externals.home.</code><code class="sig-name descname">get_boards</code><span class="sig-paren">(</span><em class="sig-param">title=None</em><span class="sig-paren">)</span></dt>
+<dd><p>Create boards.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100180202?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>If boards have been created, the information of boards no will be returned;
+otherwise, none will be returned.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.externals.home.</code><code class="sig-name descname">create_articles</code><span class="sig-paren">(</span><em class="sig-param">title</em>, <em class="sig-param">type</em>, <em class="sig-param">content</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">attention_period_in_days=None</em><span class="sig-paren">)</span></dt>
+<dd><p>Create articles.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100180301?lang=en">Common Message Property</a></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.externals.home.</code><code class="sig-name descname">init_board</code><span class="sig-paren">(</span><em class="sig-param">local</em><span class="sig-paren">)</span></dt>
+<dd><p>Initialize board. Check also: faq_bot/externals/richmenu.py
+please check home API.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/1001801?lang=en">Common Message Property</a></p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="bot-rich-menu-functions">
+<h2>Bot rich menu functions<a class="headerlink" href="#bot-rich-menu-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.externals.richmenu.</code><code class="sig-name descname">init_rich_menu</code><span class="sig-paren">(</span><em class="sig-param">local</em><span class="sig-paren">)</span></dt>
+<dd><p>init rich menu.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/1005040?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>rich menu id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.externals.richmenu.</code><code class="sig-name descname">upload_content</code><span class="sig-paren">(</span><em class="sig-param">file_path</em><span class="sig-paren">)</span></dt>
+<dd><p>Upload rich menu background picture.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/1005025?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> – resource local path</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>resource id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.externals.richmenu.</code><code class="sig-name descname">make_add_rich_menu_body</code><span class="sig-paren">(</span><em class="sig-param">rich_menu_name</em><span class="sig-paren">)</span></dt>
+<dd><p>add rich menu body</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100504001?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rich_menu_name</strong> – rich menu name</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>rich menu id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.externals.richmenu.</code><code class="sig-name descname">set_rich_menu_image</code><span class="sig-paren">(</span><em class="sig-param">resource_id</em>, <em class="sig-param">rich_menu_id</em><span class="sig-paren">)</span></dt>
+<dd><p>Set a rich menu image.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100504002?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_id</strong> – resource id</p></li>
+<li><p><strong>rich_menu_id</strong> – rich menu id</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.externals.richmenu.</code><code class="sig-name descname">set_user_specific_rich_menu</code><span class="sig-paren">(</span><em class="sig-param">rich_menu_id</em>, <em class="sig-param">account_id</em><span class="sig-paren">)</span></dt>
+<dd><p>Set a user-specific rich menu.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100504010?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rich_menu_id</strong> – rich menu id</p></li>
+<li><p><strong>account_id</strong> – user account id</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.externals.richmenu.</code><code class="sig-name descname">get_rich_menus</code><span class="sig-paren">(</span><em class="sig-param">name=None</em><span class="sig-paren">)</span></dt>
+<dd><p>Get rich menus</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100504004?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>rich menu list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.externals.richmenu.</code><code class="sig-name descname">cancel_user_specific_rich_menu</code><span class="sig-paren">(</span><em class="sig-param">account_id</em><span class="sig-paren">)</span></dt>
+<dd><p>Cancel a user-specific rich menu</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100504012?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>account_id</strong> – user account id</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="bot-i18n-functions">
+<h2>Bot i18n functions<a class="headerlink" href="#bot-i18n-functions" title="Permalink to this headline">¶</a></h2>
+<p>You can use the. /tools/gen.sh tool to generate ‘. Po’, ‘. Mo’ files.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://docs.python.org/2/library/gettext.html">https://docs.python.org/2/library/gettext.html</a>
+- test/test_i18.py</p>
+</div></blockquote>
+<div class="section" id="execute">
+<h3>execute<a class="headerlink" href="#execute" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>$ ./tools/gen.sh [filename] [po|mo] [path]</p>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 89%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>paramter</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>filename</p></td>
+<td><p>Python source filename used to generate ‘.po’,’.mo’.</p></td>
+</tr>
+<tr class="row-odd"><td><p>type</p></td>
+<td><p>‘po’ means generate ‘.po’ file, ‘mo’ means generate ‘.mo’ file</p></td>
+</tr>
+<tr class="row-even"><td><p>path</p></td>
+<td><p>Relative directory of Python source files. not ending with ‘/’.</p></td>
+</tr>
+</tbody>
+</table>
+<p>You can find the corresponding ‘.po’ file in ‘locales/../LC_MESSAGES’ according to your source file name.</p>
+</div>
+<div class="section" id="step">
+<h3>step<a class="headerlink" href="#step" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>generate ‘.po’ file.</dt><dd><p>./tools/gen.sh test_i18n.py po test&lt;br/&gt;
+check: locales/../LC_MESSAGES/test_i18n.po</p>
+</dd>
+</dl>
+</li>
+<li><p>Multilingual string to fill in ‘.po’ file.</p></li>
+<li><dl class="simple">
+<dt>generate ‘.mo’ file</dt><dd><p>./tools/gen.sh test_i18n.py mo test&lt;br/&gt;
+check: locales/../LC_MESSAGES/test_i18n.mo</p>
+</dd>
+</dl>
+</li>
+</ol>
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.model.i18n_data.</code><code class="sig-name descname">get_i18n_content_by_lang</code><span class="sig-paren">(</span><em class="sig-param">fmt</em>, <em class="sig-param">local</em>, <em class="sig-param">lang</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span></dt>
+<dd><p>Get another language string according to key string.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://docs.python.org/2/library/gettext.html">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fmt</strong> – Multilingual key string. like _(‘This is a translatable string.’)</p></li>
+<li><p><strong>local</strong> – Domain corresponding to “fmt”.</p></li>
+<li><p><strong>lang</strong> – Language. [‘en’|’ko’|’ja’]</p></li>
+<li><p><strong>kw</strong> – Named variable parameter list.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.model.i18n_data.</code><code class="sig-name descname">get_i18n_content</code><span class="sig-paren">(</span><em class="sig-param">fmt</em>, <em class="sig-param">local</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span></dt>
+<dd><p>Get multilingual data structure according to format parameter id.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://docs.python.org/2/library/gettext.html">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fmt</strong> – Multilingual key string. like _(‘This is a translatable string.’)</p></li>
+<li><p><strong>local</strong> – Domain corresponding to “fmt”.</p></li>
+<li><p><strong>kw</strong> – <p>Named variable parameter list.
+Common parameters:</p>
+<blockquote>
+<div><p>function: A callback function used to encapsulate multiple languages.
+type: Business type</p>
+</div></blockquote>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If the parameter contains the package function of the package, An encapsulated multilingual dictionary object will be returned.
+If the parameter does not contain a package function, this returns a Multilingual list object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.model.i18n_data.</code><code class="sig-name descname">make_i18n_button</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">actions</em>, <em class="sig-param">local</em>, <em class="sig-param">fmt</em><span class="sig-paren">)</span></dt>
+<dd><p>Create a multilingual button object.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500804?lang=en">Common Message Property</a></p>
+<p>Check also: faq_bot/model/data.py::make_button</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.model.i18n_data.</code><code class="sig-name descname">make_i18n_text</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">local</em>, <em class="sig-param">fmt</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span></dt>
+<dd><p>Create a multilingual text object.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500801?lang=en">Common Message Property</a></p>
+<p>Check also: faq_bot/model/data.py::make_text</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.model.i18n_data.</code><code class="sig-name descname">make_i18n_message_action</code><span class="sig-paren">(</span><em class="sig-param">post_back</em>, <em class="sig-param">local</em>, <em class="sig-param">label</em>, <em class="sig-param">fmt_label=None</em>, <em class="sig-param">text=None</em>, <em class="sig-param">fmt_text=None</em><span class="sig-paren">)</span></dt>
+<dd><p>Create a multilingual message action object.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/1005050?lang=en">Common Message Property</a></p>
+<p>Check also: faq_bot/model/data.py::make_message_action</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.model.i18n_data.</code><code class="sig-name descname">make_i18n_carousel_column</code><span class="sig-paren">(</span><em class="sig-param">locale</em>, <em class="sig-param">text</em>, <em class="sig-param">actions</em>, <em class="sig-param">title=None</em>, <em class="sig-param">image_url=None</em>, <em class="sig-param">default_action=None</em>, <em class="sig-param">fmt_text=None</em>, <em class="sig-param">fmt_title=None</em>, <em class="sig-param">fmt_url=None</em><span class="sig-paren">)</span></dt>
+<dd><p>Create a multilingual carousel column object.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500808?lang=en">Common Message Property</a></p>
+<p>Check also: faq_bot/model/data.py::make_carousel_column</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">faq_bot.model.i18n_data.</code><code class="sig-name descname">make_i18n_list_template_element</code><span class="sig-paren">(</span><em class="sig-param">locale</em>, <em class="sig-param">title</em>, <em class="sig-param">subtitle=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">resource_id=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">fmt_title=None</em>, <em class="sig-param">fmt_subtitle=None</em>, <em class="sig-param">fmt_image=None</em>, <em class="sig-param">fmt_resource=None</em><span class="sig-paren">)</span></dt>
+<dd><p>Create a list template element object.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500805?lang=en">Common Message Property</a></p>
+<p>Check also: faq_bot/model/data.py::make_list_template_element</p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="set-language-code-for-event-subject">
+<h2>Set Language Code for Event Subject<a class="headerlink" href="#set-language-code-for-event-subject" title="Permalink to this headline">¶</a></h2>
+<p>The faq bot basically creates a Find “FAQ” by task/Send a question event subject in Japanese. If necessary, you can change the language code for event subjects to Korean or English.</p>
+<p>To do so, edit # default language in config.py under the conf folder as shown below.</p>
+<p>DEFAULT_LANG =”{Language code}”</p>
+<blockquote>
+<div><p>Note
+- You can choose among kr (Korean), ja (Japanese), and en (English).</p>
+</div></blockquote>
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/faq_bot/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faq_bot</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoapi/faq_bot/index.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoapi/faq_bot/actions/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faq_bot.actions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoapi/faq_bot/common/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faq_bot.common</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoapi/faq_bot/externals/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faq_bot.externals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoapi/faq_bot/model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faq_bot.model</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoapi/faq_bot/index.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoapi/faq_bot/callbackHandler/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faq_bot.callbackHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoapi/faq_bot/check_and_handle_actions/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faq_bot.check_and_handle_actions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoapi/faq_bot/constant/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faq_bot.constant</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoapi/faq_bot/contextlog/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faq_bot.contextlog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoapi/faq_bot/faq_bot/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faq_bot.faq_bot</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoapi/faq_bot/router/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faq_bot.router</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoapi/faq_bot/settings/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faq_bot.settings</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">faq_bot</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, worksmobile.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

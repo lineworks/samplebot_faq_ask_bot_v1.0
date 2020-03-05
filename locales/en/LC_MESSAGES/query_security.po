@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-12-17 19:11+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:26
+msgid "Here are FAQs about security."
+msgstr "Here are FAQs about security."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:29
+msgid "Send a question"
+msgstr "Send a question"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:35
+msgid "See more"
+msgstr "See more"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:46
+msgid "I lost my access card."
+msgstr "I lost my access card."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:47
+msgid "My access card has been damaged."
+msgstr "My access card has been damaged."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:48
+msgid "Can visitors enter the office?"
+msgstr "Can visitors enter the office?"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:49
+msgid "I con’t remember my computer password."
+msgstr "I con’t remember my computer password."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:58
+msgid "Contact the Security Team to reissue your access card."
+msgstr "Contact the Security Team to reissue your access card."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:62
+msgid "Contact the Security Team in advance to gain access."
+msgstr "Contact the Security Team in advance to gain access."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:63
+msgid "Contact the Security Team to change your computer password."
+msgstr "Contact the Security Team to change your computer password."
+

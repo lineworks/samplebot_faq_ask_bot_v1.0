@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>faq_bot.model.i18n_data &#8212; faq_bot  documentation</title>
+    <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-faq_bot.model.i18n_data">
+<span id="faq-bot-model-i18n-data"></span><h1><a class="reference internal" href="#module-faq_bot.model.i18n_data" title="faq_bot.model.i18n_data"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faq_bot.model.i18n_data</span></code></a><a class="headerlink" href="#module-faq_bot.model.i18n_data" title="Permalink to this headline">¶</a></h1>
+<p><p>create i18n message content</p>
+</p>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="faq_bot.model.i18n_data.get_i18n_content">
+<code class="sig-prename descclassname">faq_bot.model.i18n_data.</code><code class="sig-name descname">get_i18n_content</code><span class="sig-paren">(</span><em class="sig-param">fmt</em>, <em class="sig-param">local</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.i18n_data.get_i18n_content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get multilingual data structure according to format parameter id.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://docs.python.org/2/library/gettext.html">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fmt</strong> – Multilingual key string. like _(‘This is a translatable string.’)</p></li>
+<li><p><strong>local</strong> – Domain corresponding to “fmt”.</p></li>
+<li><p><strong>kw</strong> – <p>Named variable parameter list.
+Common parameters:</p>
+<blockquote>
+<div><p>function: A callback function used to encapsulate multiple languages.
+type: Business type</p>
+</div></blockquote>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If the parameter contains the package function of the package, An encapsulated multilingual dictionary object will be returned.
+If the parameter does not contain a package function, this returns a Multilingual list object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.i18n_data.get_i18n_content_by_lang">
+<code class="sig-prename descclassname">faq_bot.model.i18n_data.</code><code class="sig-name descname">get_i18n_content_by_lang</code><span class="sig-paren">(</span><em class="sig-param">fmt</em>, <em class="sig-param">local</em>, <em class="sig-param">lang</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.i18n_data.get_i18n_content_by_lang" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get another language string according to key string.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://docs.python.org/2/library/gettext.html">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fmt</strong> – Multilingual key string. like _(‘This is a translatable string.’)</p></li>
+<li><p><strong>local</strong> – Domain corresponding to “fmt”.</p></li>
+<li><p><strong>lang</strong> – Language. [‘en’|’ko’|’ja’]</p></li>
+<li><p><strong>kw</strong> – Named variable parameter list.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.i18n_data.make_i18n_button">
+<code class="sig-prename descclassname">faq_bot.model.i18n_data.</code><code class="sig-name descname">make_i18n_button</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">actions</em>, <em class="sig-param">local</em>, <em class="sig-param">fmt</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.i18n_data.make_i18n_button" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a multilingual button object.</p>
+<p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500804?lang=en">Common Message Property</a></p>
+<p>Check also: faq_bot/model/data.py::make_button</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.i18n_data.make_i18n_text">
+<code class="sig-prename descclassname">faq_bot.model.i18n_data.</code><code class="sig-name descname">make_i18n_text</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">local</em>, <em class="sig-param">fmt</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.i18n_data.make_i18n_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a multilingual text object.</p>
+<p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500801?lang=en">Common Message Property</a></p>
+<p>Check also: faq_bot/model/data.py::make_text</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.i18n_data.make_i18n_message_action">
+<code class="sig-prename descclassname">faq_bot.model.i18n_data.</code><code class="sig-name descname">make_i18n_message_action</code><span class="sig-paren">(</span><em class="sig-param">post_back</em>, <em class="sig-param">local</em>, <em class="sig-param">label</em>, <em class="sig-param">fmt_label=None</em>, <em class="sig-param">text=None</em>, <em class="sig-param">fmt_text=None</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.i18n_data.make_i18n_message_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a multilingual message action object.</p>
+<p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/1005050?lang=en">Common Message Property</a></p>
+<p>Check also: faq_bot/model/data.py::make_message_action</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.i18n_data.make_i18n_postback_action">
+<code class="sig-prename descclassname">faq_bot.model.i18n_data.</code><code class="sig-name descname">make_i18n_postback_action</code><span class="sig-paren">(</span><em class="sig-param">post_back</em>, <em class="sig-param">local</em>, <em class="sig-param">label</em>, <em class="sig-param">fmt_label=None</em>, <em class="sig-param">text=None</em>, <em class="sig-param">fmt_text=None</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.i18n_data.make_i18n_postback_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a multilingual postback action object.</p>
+<p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/1005050?lang=en">Common Message Property</a></p>
+<p>Check also: faq_bot/model/data.py::make_postback_action</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.i18n_data.make_i18n_url_action">
+<code class="sig-prename descclassname">faq_bot.model.i18n_data.</code><code class="sig-name descname">make_i18n_url_action</code><span class="sig-paren">(</span><em class="sig-param">local</em>, <em class="sig-param">label</em>, <em class="sig-param">uri</em>, <em class="sig-param">fmt_label=None</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.i18n_data.make_i18n_url_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a multilingual uri action object.</p>
+<p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/1005050?lang=en">Common Message Property</a></p>
+<p>Check also: faq_bot/model/data.py::make_uri_action</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.i18n_data.make_i18n_carousel_column">
+<code class="sig-prename descclassname">faq_bot.model.i18n_data.</code><code class="sig-name descname">make_i18n_carousel_column</code><span class="sig-paren">(</span><em class="sig-param">locale</em>, <em class="sig-param">text</em>, <em class="sig-param">actions</em>, <em class="sig-param">title=None</em>, <em class="sig-param">image_url=None</em>, <em class="sig-param">default_action=None</em>, <em class="sig-param">fmt_text=None</em>, <em class="sig-param">fmt_title=None</em>, <em class="sig-param">fmt_url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.i18n_data.make_i18n_carousel_column" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a multilingual carousel column object.</p>
+<p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500808?lang=en">Common Message Property</a></p>
+<p>Check also: faq_bot/model/data.py::make_carousel_column</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.i18n_data.make_i18n_list_template_element">
+<code class="sig-prename descclassname">faq_bot.model.i18n_data.</code><code class="sig-name descname">make_i18n_list_template_element</code><span class="sig-paren">(</span><em class="sig-param">locale</em>, <em class="sig-param">title</em>, <em class="sig-param">subtitle=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">resource_id=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">fmt_title=None</em>, <em class="sig-param">fmt_subtitle=None</em>, <em class="sig-param">fmt_image=None</em>, <em class="sig-param">fmt_resource=None</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.i18n_data.make_i18n_list_template_element" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a list template element object.</p>
+<p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500805?lang=en">Common Message Property</a></p>
+<p>Check also: faq_bot/model/data.py::make_list_template_element</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../../index.html">faq_bot</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, worksmobile.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../../_sources/autoapi/faq_bot/model/i18n_data/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

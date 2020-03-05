@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-12-17 19:11+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:26
+msgid "Here are FAQs about security."
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:29
+msgid "Send a question"
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:35
+msgid "See more"
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:46
+msgid "I lost my access card."
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:47
+msgid "My access card has been damaged."
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:48
+msgid "Can visitors enter the office?"
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:49
+msgid "I con’t remember my computer password."
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:58
+msgid "Contact the Security Team to reissue your access card."
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:62
+msgid "Contact the Security Team in advance to gain access."
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:63
+msgid "Contact the Security Team to change your computer password."
+msgstr ""
+

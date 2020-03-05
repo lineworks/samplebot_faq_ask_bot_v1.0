@@ -1,0 +1,21 @@
+:mod:`faq_bot.actions.query_leave`
+==================================
+
+.. py:module:: faq_bot.actions.query_leave
+
+.. autoapi-nested-parse::
+
+   Deal with issues related to leave query
+
+
+
+Module Contents
+---------------
+
+.. function:: query_leave(account_id, __, ___)
+
+   This function deals with the problems related to leave query.
+
+   :param account_id: user account id.
+
+

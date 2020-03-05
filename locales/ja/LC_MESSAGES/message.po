@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-12-17 19:11+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:18
+msgid "I’m sorry. I couldn't understand the words. \n\nPlease select the function you want from Bot Menu at the bottom of the chat window."
+msgstr "申し訳ありません。入力内容が理解できませんでした。 \n\nトークルームの下にあるBotメニューからご希望の項目を選択してください。"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:28
+msgid "Failed to create bulletin board. \n\nAsk the FAQ Bot manager to check if the bulletin board creation item has been set incorrectly or if the bulletin board title or description has exceeded the character limit."
+msgstr "掲示板を作成できませんでした。 \n\n掲示板の作成項目の設定が誤っているか、掲示板のタイトルまたは説明の長さ制限を超過してはいないか、FAQ Botの管理者に確認してください。"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:40
+msgid "Failed to complete posting. \n\nAsk the FAQ Ask Bot manager to check if the bulletin board number does not exist or if other items are set up incorrectly."
+msgstr "投稿を作成できませんでした。\n\n存在しない掲示板番号を指定したか、他の項目の設定が誤ってはいないか、お問い合わせ Botの管理者に確認してください。"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:49
+msgid "Failed to complete posting. \n\nAsk the in-house manager if the public capacity is not enough or if the capacity available for domain use has been exceeded."
+msgstr "投稿を作成できませんでした。\n\n共有ストレージが不足しているか、ドメインで使用可能な容量を超過していないか、社内の管理者にお問い合わせください。"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:67
+msgid "HR/Leave"
+msgstr "人事/休暇"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:72
+msgid "Welfare/Work support"
+msgstr "福利厚生/業務支援"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:78
+msgid "Security"
+msgstr "セキュリティ"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:99
+msgid "Do you want to send the following as your question? \n\n===\n{message}\n==="
+msgstr "以下の内容でお問い合わせを送信しますか？\n\n===\n{message}\n==="
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:102
+msgid "Send"
+msgstr "送信"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:107
+msgid "Modify"
+msgstr "内容修正"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:112
+msgid "Cancel"
+msgstr "キャンセル"
+

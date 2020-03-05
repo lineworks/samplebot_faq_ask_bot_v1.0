@@ -1,0 +1,22 @@
+:mod:`faq_bot.actions.enquire_message`
+======================================
+
+.. py:module:: faq_bot.actions.enquire_message
+
+.. autoapi-nested-parse::
+
+   Prompt user for enquire message
+
+
+
+Module Contents
+---------------
+
+.. function:: enquire_message(account_id, callback, __)
+
+   This function prompts the user for a message.
+
+   :param account_id: user account id.
+   :param callback: Callback corresponding to business type.
+
+

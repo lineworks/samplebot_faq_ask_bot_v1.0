@@ -1,0 +1,25 @@
+:mod:`faq_bot.externals.contacts`
+=================================
+
+.. py:module:: faq_bot.externals.contacts
+
+.. autoapi-nested-parse::
+
+   get a account external key.
+
+
+
+Module Contents
+---------------
+
+.. function:: get_account_info(account_id)
+
+   Get account information.
+
+       reference
+           - `Common Message Property <https://developers.worksmobile.com/kr/document/1006004/v1?lang=en>`_
+
+   :param account_id: user account id.
+   :return: name(user name), department(user department).
+
+

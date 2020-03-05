@@ -1,0 +1,33 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-12-17 19:02+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/externals/richmenu.py:75
+msgid "\"Find FAQ\" by task"
+msgstr "業務別の「FAQ検索」"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/externals/richmenu.py:76
+msgid "Do you have any work-related questions? \n\"Find FAQ\" by task"
+msgstr "業務中に疑問に思った点はありますか？ \n業務別の「FAQ検索」"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/externals/richmenu.py:86
+msgid "Send a question"
+msgstr "担当者に問い合わせる"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/externals/richmenu.py:92
+msgid "Go to Initial Menu"
+msgstr "スタートメニューへ"
+

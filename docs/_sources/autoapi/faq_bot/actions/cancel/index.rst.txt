@@ -1,0 +1,21 @@
+:mod:`faq_bot.actions.cancel`
+=============================
+
+.. py:module:: faq_bot.actions.cancel
+
+.. autoapi-nested-parse::
+
+   Deal cancel ask a person
+
+
+
+Module Contents
+---------------
+
+.. function:: cancel(account_id, __, ___)
+
+   This function handles user cancellation inquiry.
+
+   :param account_id: user account id.
+
+

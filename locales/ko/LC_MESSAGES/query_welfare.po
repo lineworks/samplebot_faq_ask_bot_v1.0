@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-12-17 19:11+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:26
+msgid "Here are FAQs about welfare and work support."
+msgstr "복지 및 업무지원 관련 자주 묻는 질문입니다."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:30
+msgid "Send a question"
+msgstr "담당자에게 문의하기"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:36
+msgid "See more"
+msgstr "자세히 보기"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:47
+msgid "The types of in-house welfare."
+msgstr "사내 복지제도에는 무엇이 있나요?"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:48
+msgid "What kinds of in-house clubs are there?"
+msgstr "사내 동호회에는 무엇이 있나요?"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:49
+msgid "Can I use a company car?"
+msgstr "업무 차량을 지원 받을 수 있나요?"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:50
+msgid "How can I receive office supplies?"
+msgstr "사무용품을 지원 받을 수 있나요?"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:61
+msgid "Welfare includes the four main insurances, checkup, etc."
+msgstr "4대보험 가입, 정기 건강검진, 사내 동호회 등 복지제도가 있습니다."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:62
+msgid "A variety of club activities such as sports are supported."
+msgstr "스포츠, 자기계발 등 다양한 동호회 활동을 지원하고 있습니다."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:63
+msgid "Contact the Work Support Team to request a company car."
+msgstr "업무지원팀에 연락하여 차량 배차를 신청할 수 있습니다."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:64
+msgid "Visit the Work Support Team to receive office supplies."
+msgstr "업무지원팀에 방문하여 사무용품을 수령할 수 있습니다."
+

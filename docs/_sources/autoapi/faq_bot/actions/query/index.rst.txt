@@ -1,0 +1,25 @@
+:mod:`faq_bot.actions.query`
+============================
+
+.. py:module:: faq_bot.actions.query
+
+.. autoapi-nested-parse::
+
+   Handle "find FAQ" by task
+
+
+
+Module Contents
+---------------
+
+.. function:: template_introduce()
+
+   This function constructs three image carousels for self introduction.
+   Check also: faq_bot/model/data.py
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/kr/document/100500805?lang=en>`_
+
+   :return: image carousels type message content.
+
+

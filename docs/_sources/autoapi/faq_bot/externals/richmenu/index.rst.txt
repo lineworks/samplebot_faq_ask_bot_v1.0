@@ -1,0 +1,89 @@
+:mod:`faq_bot.externals.richmenu`
+=================================
+
+.. py:module:: faq_bot.externals.richmenu
+
+.. autoapi-nested-parse::
+
+   rich menu's api
+
+
+
+Module Contents
+---------------
+
+.. function:: upload_content(file_path)
+
+   Upload rich menu background picture.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/1005025?lang=en>`_
+
+   :param file_path: resource local path
+   :return: resource id
+
+
+.. function:: make_add_rich_menu_body(rich_menu_name)
+
+   add rich menu body
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/100504001?lang=en>`_
+
+   :param rich_menu_name: rich menu name
+   :return: rich menu id
+
+
+.. function:: set_rich_menu_image(resource_id, rich_menu_id)
+
+   Set a rich menu image.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/100504002?lang=en>`_
+
+   :param resource_id: resource id
+   :param rich_menu_id: rich menu id
+   :return:
+
+
+.. function:: set_user_specific_rich_menu(rich_menu_id, account_id)
+
+   Set a user-specific rich menu.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/100504010?lang=en>`_
+
+   :param rich_menu_id: rich menu id
+   :param account_id: user account id
+
+
+.. function:: get_rich_menus(name=None)
+
+   Get rich menus
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/100504004?lang=en>`_
+
+   :return: rich menu list
+
+
+.. function:: cancel_user_specific_rich_menu(account_id)
+
+   Cancel a user-specific rich menu
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/100504012?lang=en>`_
+
+   :param account_id: user account id
+
+
+.. function:: init_rich_menu(local)
+
+   init rich menu.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/1005040?lang=en>`_
+
+   :return: rich menu id
+
+

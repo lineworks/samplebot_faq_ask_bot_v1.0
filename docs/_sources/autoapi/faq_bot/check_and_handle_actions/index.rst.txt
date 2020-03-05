@@ -1,0 +1,69 @@
+:mod:`faq_bot.check_and_handle_actions`
+=======================================
+
+.. py:module:: faq_bot.check_and_handle_actions
+
+.. autoapi-nested-parse::
+
+   Factory used to create handler and execute handler.
+
+
+
+Module Contents
+---------------
+
+.. py:class:: CheckAndHandleActions
+
+   Factory used to create handler and execute handler.
+
+   .. attribute:: __text
+      :annotation: = 
+
+      
+
+   .. attribute:: __post_back
+      :annotation: = 
+
+      
+
+   .. attribute:: __account_id
+      
+
+      
+
+   .. attribute:: __content_type
+      :annotation: = 
+
+      
+
+   .. attribute:: __content_post_back
+      :annotation: = 
+
+      
+
+   .. attribute:: __type
+      :annotation: = none
+
+      
+
+   .. attribute:: __handle
+      
+
+      
+
+   .. attribute:: __user_message
+      
+
+      
+
+   .. method:: execute(self, body)
+
+
+      Verify the body parameter and execute handler.
+      Please refer to the reference link of the function.
+
+          reference
+          - `Common Message Property <https://developers.worksmobile.com/jp/document/100500901?lang=en>`_
+
+
+

@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-12-17 19:11+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:18
+msgid "I’m sorry. I couldn't understand the words. \n\nPlease select the function you want from Bot Menu at the bottom of the chat window."
+msgstr "죄송합니다. 말씀주신 내용을 이해하지 못하였습니다. \n\n대화방 하단의 봇 메뉴에서 원하시는 기능을 선택해주세요."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:28
+msgid "Failed to create bulletin board. \n\nAsk the FAQ Bot manager to check if the bulletin board creation item has been set incorrectly or if the bulletin board title or description has exceeded the character limit."
+msgstr "게시판을 생성하지 못하였습니다. \n\n게시판 생성 항목을 잘못 설정하였거나, 게시판 제목 또는 설명의 길이 제한을 초과하였는지 FAQ 봇 관리자에게 확인을 요청해 보세요."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:40
+msgid "Failed to complete posting. \n\nAsk the FAQ Ask Bot manager to check if the bulletin board number does not exist or if other items are set up incorrectly."
+msgstr "게시글을 작성하지 못하였습니다. \n\n존재하지 않는 게시판 번호를 지정하였거나, 다른 항목의 설정이 잘못 되었는지 FAQ 문의 봇 관리자에게 확인을 요청해 보세요."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:49
+msgid "Failed to complete posting. \n\nAsk the in-house manager if the public capacity is not enough or if the capacity available for domain use has been exceeded."
+msgstr "게시글을 작성하지 못하였습니다. \n\n공용 용량이 부족하거나, 도메인에서 사용 가능한 용량을 초과하였는지 사내 관리자에게 문의를 부탁드립니다."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:67
+msgid "HR/Leave"
+msgstr "인사/휴가"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:72
+msgid "Welfare/Work support"
+msgstr "복지/업무지원"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:78
+msgid "Security"
+msgstr "보안"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:99
+msgid "Do you want to send the following as your question? \n\n===\n{message}\n==="
+msgstr "아래 내용으로 문의를 전달할까요?\n\n===\n{message}\n==="
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:102
+msgid "Send"
+msgstr "전달"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:107
+msgid "Modify"
+msgstr "내용 수정"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/message.py:112
+msgid "Cancel"
+msgstr "취소"
+

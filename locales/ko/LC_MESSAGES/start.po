@@ -1,0 +1,25 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-12-17 19:11+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/start.py:44
+msgid "Hello. I’m FAQ Ask Bot. I’m here to answer your office-related questions."
+msgstr "안녕하세요, 회사 생활 관련 궁금한 부분을 찾아드리는 FAQ 문의 봇입니다. "
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/start.py:49
+msgid "Please select an item from the menu below."
+msgstr "아래 메뉴에서 필요한 항목을 선택해 주세요."
+

@@ -1,0 +1,21 @@
+:mod:`faq_bot.actions.modify`
+=============================
+
+.. py:module:: faq_bot.actions.modify
+
+.. autoapi-nested-parse::
+
+   Deal with users' modification of questions
+
+
+
+Module Contents
+---------------
+
+.. function:: modify(account_id, __, ___)
+
+   This function handles the user's modification of the question
+
+   :param account_id: user account id.
+
+

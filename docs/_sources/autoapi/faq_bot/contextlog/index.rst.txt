@@ -1,0 +1,82 @@
+:mod:`faq_bot.contextlog`
+=========================
+
+.. py:module:: faq_bot.contextlog
+
+.. autoapi-nested-parse::
+
+   The context for logging request_id
+
+
+
+Module Contents
+---------------
+
+.. py:class:: RequestContextData(request_id=0)
+
+   Bases: :class:`object`
+
+   request_id
+
+   .. method:: __eq__(self, other)
+
+
+
+
+.. py:class:: Metaclass
+
+   Bases: :class:`type`
+
+   meta class for RequestContext
+
+   .. method:: data(cls)
+      :property:
+
+
+      data property of RequestContext
+
+
+
+.. py:class:: RequestContext(request_id=0)
+
+   Bases: :class:`object`
+
+   The context class for request_id
+
+   .. attribute:: _state
+      
+
+      
+
+   .. attribute:: data
+      
+
+      
+
+   .. method:: __enter__(self)
+
+
+
+   .. method:: __exit__(self, exc_type, exc_value, traceback)
+
+
+
+
+.. py:class:: RequestContextFilter
+
+   Bases: :class:`logging.Filter`
+
+   logging filter for add request_id to record
+
+   .. method:: filter(self, record)
+
+
+      add request_id to record
+
+
+
+.. function:: contextualizedLogging(handler)
+
+   This class decorator is contextualizing the HTTP request in logging.
+
+

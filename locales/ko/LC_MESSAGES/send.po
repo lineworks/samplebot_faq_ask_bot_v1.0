@@ -1,0 +1,30 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-12-23 16:28+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: /home1/irteam/oneapp-samplebot-FAQ/faq_bot/actions/send.py:32
+msgid "Your question has been sent to the person in charge. \n\nThe staff will answer your question as soon as possible."
+msgstr "문의하신 내용이 담당자에게 전달 되었습니다 \n\n빠른 시간 내 담당자가 직접 답변할 수 있도록 요청하겠습니다."
+
+
+#: /home1/irteam/oneapp-samplebot-FAQ/faq_bot/actions/send.py:39
+msgid "If you have any additional questions, please select the task from below. If you want to go back to the initial stage, select [Go to Initial Menu] from the menu below."
+msgstr "추가 문의가 필요하실 경우 , 아래에서 해당 업무를 선택해 주시기 바라며, 최초 단계로 돌아가시려면 하단의 메뉴에서 [초기 메뉴로]를 선택해 주세요."
+
+#: /home1/irteam/oneapp-samplebot-FAQ/faq_bot/actions/send.py:51
+msgid "{department} {name} made an inquiry."
+msgstr "{department} {name}님의 문의"
+

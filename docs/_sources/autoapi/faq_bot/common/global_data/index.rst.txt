@@ -1,0 +1,30 @@
+:mod:`faq_bot.common.global_data`
+=================================
+
+.. py:module:: faq_bot.common.global_data
+
+.. autoapi-nested-parse::
+
+   This is a global variable cache.
+
+
+
+Module Contents
+---------------
+
+.. function:: set_value(key, value)
+
+   Sets a value into the global variable cache.
+   :param key: key
+   :param value: value
+   :return: no
+
+
+.. function:: get_value(key, def_value=None)
+
+   Gets a value from the global variable cache.
+   :param key: key
+   :param def_value: default value
+   :return: value, If the key does not exist, the default value.
+
+

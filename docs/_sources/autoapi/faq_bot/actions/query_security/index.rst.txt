@@ -1,0 +1,21 @@
+:mod:`faq_bot.actions.query_security`
+=====================================
+
+.. py:module:: faq_bot.actions.query_security
+
+.. autoapi-nested-parse::
+
+   Deals with user query security related problems.
+
+
+
+Module Contents
+---------------
+
+.. function:: query_security(account_id, __, ___)
+
+   This function deals with user query security related problems.
+
+   :param account_id: user account id.
+
+

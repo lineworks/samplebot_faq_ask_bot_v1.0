@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-12-17 19:11+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:26
+msgid "Here are FAQs about HR and leave."
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:29
+msgid "Send a question"
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:34
+msgid "See more"
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:45
+msgid "The types of leave."
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:46
+msgid "How many days of leave I have?"
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:47
+msgid "To request a leave."
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:48
+msgid "To cancel my leave."
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:59
+msgid "Types of leave are classified in the Labor Standards Act."
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:60
+msgid "The remaining days of your leave are on in-house browser."
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:61
+msgid "You can request a leave via the in-house browser."
+msgstr ""
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:62
+msgid "You can cancel your leave request via the in-house browser."
+msgstr ""
+

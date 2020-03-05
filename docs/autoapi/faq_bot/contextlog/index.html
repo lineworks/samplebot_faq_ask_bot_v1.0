@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>faq_bot.contextlog &#8212; faq_bot  documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-faq_bot.contextlog">
+<span id="faq-bot-contextlog"></span><h1><a class="reference internal" href="#module-faq_bot.contextlog" title="faq_bot.contextlog"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faq_bot.contextlog</span></code></a><a class="headerlink" href="#module-faq_bot.contextlog" title="Permalink to this headline">¶</a></h1>
+<p><p>The context for logging request_id</p>
+</p>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="faq_bot.contextlog.RequestContextData">
+<em class="property">class </em><code class="sig-prename descclassname">faq_bot.contextlog.</code><code class="sig-name descname">RequestContextData</code><span class="sig-paren">(</span><em class="sig-param">request_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.contextlog.RequestContextData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>request_id</p>
+<dl class="method">
+<dt id="faq_bot.contextlog.RequestContextData.__eq__">
+<code class="sig-name descname">__eq__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">other</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.contextlog.RequestContextData.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="faq_bot.contextlog.Metaclass">
+<em class="property">class </em><code class="sig-prename descclassname">faq_bot.contextlog.</code><code class="sig-name descname">Metaclass</code><a class="headerlink" href="#faq_bot.contextlog.Metaclass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></p>
+<p>meta class for RequestContext</p>
+<dl class="method">
+<dt id="faq_bot.contextlog.Metaclass.data">
+<em class="property">property </em><code class="sig-name descname">data</code><span class="sig-paren">(</span><em class="sig-param">cls</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.contextlog.Metaclass.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>data property of RequestContext</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="faq_bot.contextlog.RequestContext">
+<em class="property">class </em><code class="sig-prename descclassname">faq_bot.contextlog.</code><code class="sig-name descname">RequestContext</code><span class="sig-paren">(</span><em class="sig-param">request_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.contextlog.RequestContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The context class for request_id</p>
+<dl class="attribute">
+<dt id="faq_bot.contextlog.RequestContext._state">
+<code class="sig-name descname">_state</code><a class="headerlink" href="#faq_bot.contextlog.RequestContext._state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="faq_bot.contextlog.RequestContext.data">
+<code class="sig-name descname">data</code><a class="headerlink" href="#faq_bot.contextlog.RequestContext.data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="faq_bot.contextlog.RequestContext.__enter__">
+<code class="sig-name descname">__enter__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.contextlog.RequestContext.__enter__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="faq_bot.contextlog.RequestContext.__exit__">
+<code class="sig-name descname">__exit__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">exc_type</em>, <em class="sig-param">exc_value</em>, <em class="sig-param">traceback</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.contextlog.RequestContext.__exit__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="faq_bot.contextlog.RequestContextFilter">
+<em class="property">class </em><code class="sig-prename descclassname">faq_bot.contextlog.</code><code class="sig-name descname">RequestContextFilter</code><a class="headerlink" href="#faq_bot.contextlog.RequestContextFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Filter</span></code></p>
+<p>logging filter for add request_id to record</p>
+<dl class="method">
+<dt id="faq_bot.contextlog.RequestContextFilter.filter">
+<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">record</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.contextlog.RequestContextFilter.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>add request_id to record</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.contextlog.contextualizedLogging">
+<code class="sig-prename descclassname">faq_bot.contextlog.</code><code class="sig-name descname">contextualizedLogging</code><span class="sig-paren">(</span><em class="sig-param">handler</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.contextlog.contextualizedLogging" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class decorator is contextualizing the HTTP request in logging.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">faq_bot</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, worksmobile.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../_sources/autoapi/faq_bot/contextlog/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

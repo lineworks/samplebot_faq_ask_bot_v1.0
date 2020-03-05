@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-12-17 19:11+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:26
+msgid "Here are FAQs about welfare and work support."
+msgstr "Here are FAQs about welfare and work support."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:30
+msgid "Send a question"
+msgstr "Send a question"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:36
+msgid "See more"
+msgstr "See more"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:47
+msgid "The types of in-house welfare."
+msgstr "The types of in-house welfare."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:48
+msgid "What kinds of in-house clubs are there?"
+msgstr "What kinds of in-house clubs are there?"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:49
+msgid "Can I use a company car?"
+msgstr "Can I use a company car?"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:50
+msgid "How can I receive office supplies?"
+msgstr "How can I receive office supplies?"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:61
+msgid "Welfare includes the four main insurances, checkup, etc."
+msgstr "Welfare includes the four main insurances, checkup, etc."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:62
+msgid "A variety of club activities such as sports are supported."
+msgstr "A variety of club activities such as sports are supported."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:63
+msgid "Contact the Work Support Team to request a company car."
+msgstr "Contact the Work Support Team to request a company car."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_welfare.py:64
+msgid "Visit the Work Support Team to receive office supplies."
+msgstr "Visit the Work Support Team to receive office supplies."
+

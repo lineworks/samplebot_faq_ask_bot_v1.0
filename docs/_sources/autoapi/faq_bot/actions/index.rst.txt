@@ -1,0 +1,28 @@
+:mod:`faq_bot.actions`
+======================
+
+.. py:module:: faq_bot.actions
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   cancel/index.rst
+   deal_message/index.rst
+   enquire/index.rst
+   enquire_message/index.rst
+   message/index.rst
+   modify/index.rst
+   query/index.rst
+   query_leave/index.rst
+   query_security/index.rst
+   query_welfare/index.rst
+   send/index.rst
+   start/index.rst
+   to_first/index.rst
+   transfer_message/index.rst
+
+

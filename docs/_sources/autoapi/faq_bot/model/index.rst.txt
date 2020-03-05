@@ -1,0 +1,17 @@
+:mod:`faq_bot.model`
+====================
+
+.. py:module:: faq_bot.model
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   cachehandle/index.rst
+   data/index.rst
+   i18n_data/index.rst
+
+

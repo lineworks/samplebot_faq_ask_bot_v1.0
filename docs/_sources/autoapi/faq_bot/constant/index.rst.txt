@@ -1,0 +1,89 @@
+:mod:`faq_bot.constant`
+=======================
+
+.. py:module:: faq_bot.constant
+
+.. autoapi-nested-parse::
+
+   constants.py Defining the constant used for a project.
+
+
+
+Module Contents
+---------------
+
+.. data:: ABSDIR_OF_SELF
+   
+
+   
+
+.. data:: ABSDIR_OF_PARENT
+   
+
+   
+
+.. data:: HEROKU_SERVER_ID
+   
+
+   
+
+.. data:: PRIVATE_KEY_PATH
+   
+
+   
+
+.. data:: STORAGE_DOMAIN
+   :annotation: = storage.worksmobile.com
+
+   
+
+.. data:: AUTH_DOMAIN
+   :annotation: = auth.worksmobile.com
+
+   
+
+.. data:: DEVELOP_API_DOMAIN
+   :annotation: = apis.worksmobile.com
+
+   
+
+.. data:: CALLBACK_ADDRESS
+   
+
+   
+
+.. data:: PHOTO_URL
+   
+
+   
+
+.. data:: BOT_NAME
+   :annotation: = In-house FAQ Bot
+
+   
+
+.. data:: TYPES
+   
+
+   
+
+.. data:: API_BO
+   
+
+   
+
+.. data:: OPEN_API
+   
+
+   
+
+.. data:: DB_CONFIG
+   
+
+   
+
+.. data:: FILE_SYSTEM
+   
+
+   
+

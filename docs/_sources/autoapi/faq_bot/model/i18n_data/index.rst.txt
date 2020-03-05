@@ -1,0 +1,116 @@
+:mod:`faq_bot.model.i18n_data`
+==============================
+
+.. py:module:: faq_bot.model.i18n_data
+
+.. autoapi-nested-parse::
+
+   create i18n message content
+
+
+
+Module Contents
+---------------
+
+.. function:: get_i18n_content(fmt, local, **kw)
+
+   Get multilingual data structure according to format parameter id.
+
+       reference
+       - `Common Message Property <https://docs.python.org/2/library/gettext.html>`_
+
+   :param fmt: Multilingual key string. like _('This is a translatable string.')
+   :param local: Domain corresponding to "fmt".
+   :param kw: Named variable parameter list.
+       Common parameters:
+           function: A callback function used to encapsulate multiple languages.
+           type: Business type
+   :return:
+       If the parameter contains the package function of the package, An encapsulated multilingual dictionary object will be returned.
+       If the parameter does not contain a package function, this returns a Multilingual list object.
+
+
+.. function:: get_i18n_content_by_lang(fmt, local, lang, **kw)
+
+   Get another language string according to key string.
+
+       reference
+       - `Common Message Property <https://docs.python.org/2/library/gettext.html>`_
+
+   :param fmt: Multilingual key string. like _('This is a translatable string.')
+   :param local: Domain corresponding to "fmt".
+   :param lang: Language. ['en'|'ko'|'ja']
+   :param kw: Named variable parameter list.
+   :return: a string.
+
+
+.. function:: make_i18n_button(text, actions, local, fmt)
+
+   Create a multilingual button object.
+
+   reference
+   - `Common Message Property <https://developers.worksmobile.com/jp/document/100500804?lang=en>`_
+
+   Check also: faq_bot/model/data.py::make_button
+
+
+.. function:: make_i18n_text(text, local, fmt, **kw)
+
+   Create a multilingual text object.
+
+   reference
+   - `Common Message Property <https://developers.worksmobile.com/jp/document/100500801?lang=en>`_
+
+   Check also: faq_bot/model/data.py::make_text
+
+
+.. function:: make_i18n_message_action(post_back, local, label, fmt_label=None, text=None, fmt_text=None)
+
+   Create a multilingual message action object.
+
+   reference
+   - `Common Message Property <https://developers.worksmobile.com/jp/document/1005050?lang=en>`_
+
+   Check also: faq_bot/model/data.py::make_message_action
+
+
+.. function:: make_i18n_postback_action(post_back, local, label, fmt_label=None, text=None, fmt_text=None)
+
+   Create a multilingual postback action object.
+
+   reference
+   - `Common Message Property <https://developers.worksmobile.com/jp/document/1005050?lang=en>`_
+
+   Check also: faq_bot/model/data.py::make_postback_action
+
+
+.. function:: make_i18n_url_action(local, label, uri, fmt_label=None)
+
+   Create a multilingual uri action object.
+
+   reference
+   - `Common Message Property <https://developers.worksmobile.com/jp/document/1005050?lang=en>`_
+
+   Check also: faq_bot/model/data.py::make_uri_action
+
+
+.. function:: make_i18n_carousel_column(locale, text, actions, title=None, image_url=None, default_action=None, fmt_text=None, fmt_title=None, fmt_url=None)
+
+   Create a multilingual carousel column object.
+
+   reference
+   - `Common Message Property <https://developers.worksmobile.com/jp/document/100500808?lang=en>`_
+
+   Check also: faq_bot/model/data.py::make_carousel_column
+
+
+.. function:: make_i18n_list_template_element(locale, title, subtitle=None, image=None, resource_id=None, action=None, fmt_title=None, fmt_subtitle=None, fmt_image=None, fmt_resource=None)
+
+   Create a list template element object.
+
+   reference
+   - `Common Message Property <https://developers.worksmobile.com/jp/document/100500805?lang=en>`_
+
+   Check also: faq_bot/model/data.py::make_list_template_element
+
+

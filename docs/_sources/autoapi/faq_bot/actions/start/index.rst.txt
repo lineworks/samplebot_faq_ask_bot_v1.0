@@ -1,0 +1,37 @@
+:mod:`faq_bot.actions.start`
+============================
+
+.. py:module:: faq_bot.actions.start
+
+.. autoapi-nested-parse::
+
+   Start using robots
+
+
+
+Module Contents
+---------------
+
+.. function:: register_rich_menun(account_id)
+
+   Set up rich menu for chat with users.
+   Check also: faq_bot/model/data.py
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/1005040?lang=en>`_
+
+   :param account_id: user account id
+
+
+.. function:: start_content(account_id)
+
+
+.. function:: start(account_id, _, __)
+
+   Handle the user start using robots.
+   Send the robot's self introduction information,
+   and the chat room is bound with rich menu.
+
+   :param account_id: user account id.
+
+

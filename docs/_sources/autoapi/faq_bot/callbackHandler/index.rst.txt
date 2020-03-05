@@ -1,0 +1,33 @@
+:mod:`faq_bot.callbackHandler`
+==============================
+
+.. py:module:: faq_bot.callbackHandler
+
+.. autoapi-nested-parse::
+
+   Process requests of users
+
+
+
+Module Contents
+---------------
+
+.. py:class:: CallbackHandler
+
+   Bases: :class:`tornado.web.RequestHandler`
+
+   Process business requests of users.
+
+   tornado.web.RequestHandler base class for HTTP request handlers.
+
+       reference
+       - `Common Message Property <https://www.tornadoweb.org/en/stable/web.html>`_
+
+   .. method:: post(self)
+
+
+      Implement the handle to corresponding HTTP method.
+      Check also: faq_bot/router.py
+
+
+

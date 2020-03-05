@@ -1,0 +1,58 @@
+:mod:`faq_bot.externals.register_bot`
+=====================================
+
+.. py:module:: faq_bot.externals.register_bot
+
+.. autoapi-nested-parse::
+
+   Initialize bot no.
+
+
+
+Module Contents
+---------------
+
+.. function:: get_message_bot_from_remote()
+
+   get a message bot.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/1005006?lang=en>`_
+
+   :return: bot no
+
+
+.. function:: register_bot()
+
+   Register a message bot.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/1005002?lang=en>`_
+
+   :param photo_address: Access address of user's Avatar,
+       If you need to change the user image,
+       please replace the corresponding file in the image/, Only PNG file.
+   :return: bot no
+
+
+.. function:: register_bot_domain(bot_no)
+
+   Register a message bot domain.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/1005004?lang=en>`_
+
+   :param bot_no: bot no
+
+
+.. function:: init_bot()
+
+   Initialize bot info. If the BOT is not registered, the system will fail to start.
+
+   Before BOT registration,
+   If BOT has been registered, it does not need to be re registered.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/2005001?lang=en>`_
+
+

@@ -1,0 +1,22 @@
+:mod:`faq_bot.actions.transfer_message`
+=======================================
+
+.. py:module:: faq_bot.actions.transfer_message
+
+.. autoapi-nested-parse::
+
+   Handle user's transfer from query business to ask a person
+
+
+
+Module Contents
+---------------
+
+.. function:: transfer_message(account_id, callback, __)
+
+   This function prompts the user to go to ask someone.
+
+   :param account_id: user account id.
+   :param callback: Business type.
+
+

@@ -1,0 +1,60 @@
+:mod:`faq_bot.actions.message`
+==============================
+
+.. py:module:: faq_bot.actions.message
+
+.. autoapi-nested-parse::
+
+   common message
+
+
+
+Module Contents
+---------------
+
+.. function:: create_quick_replay()
+
+   Building a quick reply floating window for messages.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/100500807?lang=en>`_
+
+   Check also: faq_bot/model/data.py
+   :return: quick replay item
+
+
+.. function:: echo_display(message)
+
+   Generate messages that require user confirmation.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/100500807?lang=en>`_
+
+   Check also: faq_bot/model/data.py
+   :param message: User input message.
+   :return: Message to prompt users.
+
+
+.. function:: create_quick_replay_item(callback, locale, label, fmt_label=None, text=None, fmt_text=None)
+
+   Building a quick reply floating window for messages.
+   Check also: faq_bot/model/data.py
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/100500807?lang=en>`_
+
+   :param callback: callback string for the button.
+   :return: quick replay item
+
+
+.. function:: create_carousel(locale, labels, urls, texts, titles, image_urls, fmt_labels=None, fmt_texts=None, fmt_titles=None)
+
+   Building a quick reply floating window for messages.
+   Check also: faq_bot/model/data.py
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/100500807?lang=en>`_
+
+   :return: return carousel content
+
+

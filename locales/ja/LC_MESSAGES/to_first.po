@@ -1,0 +1,25 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-12-23 18:09+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: /home1/irteam/oneapp-samplebot-FAQ/faq_bot/actions/to_first.py:22
+msgid "Cannot be selected since you are currently in Initial Menu. \n\nSelect it if you want to find FAQ or go back to Initial Menu while the person in charge is checking your question."
+msgstr "現在、スタートメニュー地点におりますので、この機能はご選択いただけません。 \n\nFAQを検索したり、担当者の確認中にスタートメニューに戻りたい場合に選択してください。"
+
+#: /home1/irteam/oneapp-samplebot-FAQ/faq_bot/actions/to_first.py:31
+msgid "Moved to FAQ Initial Menu.\n\nPlease select an item from the menu below."
+msgstr "FAQのスタートメニューに移動しました。\n\n以下のメニューから必要な項目を選択してください。"
+

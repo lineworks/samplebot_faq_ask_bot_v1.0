@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>faq_bot.check_and_handle_actions &#8212; faq_bot  documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-faq_bot.check_and_handle_actions">
+<span id="faq-bot-check-and-handle-actions"></span><h1><a class="reference internal" href="#module-faq_bot.check_and_handle_actions" title="faq_bot.check_and_handle_actions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faq_bot.check_and_handle_actions</span></code></a><a class="headerlink" href="#module-faq_bot.check_and_handle_actions" title="Permalink to this headline">¶</a></h1>
+<p><p>Factory used to create handler and execute handler.</p>
+</p>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="faq_bot.check_and_handle_actions.CheckAndHandleActions">
+<em class="property">class </em><code class="sig-prename descclassname">faq_bot.check_and_handle_actions.</code><code class="sig-name descname">CheckAndHandleActions</code><a class="headerlink" href="#faq_bot.check_and_handle_actions.CheckAndHandleActions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Factory used to create handler and execute handler.</p>
+<dl class="attribute">
+<dt id="faq_bot.check_and_handle_actions.CheckAndHandleActions.__text">
+<code class="sig-name descname">__text</code><em class="property"> =</em><a class="headerlink" href="#faq_bot.check_and_handle_actions.CheckAndHandleActions.__text" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="faq_bot.check_and_handle_actions.CheckAndHandleActions.__post_back">
+<code class="sig-name descname">__post_back</code><em class="property"> =</em><a class="headerlink" href="#faq_bot.check_and_handle_actions.CheckAndHandleActions.__post_back" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="faq_bot.check_and_handle_actions.CheckAndHandleActions.__account_id">
+<code class="sig-name descname">__account_id</code><a class="headerlink" href="#faq_bot.check_and_handle_actions.CheckAndHandleActions.__account_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="faq_bot.check_and_handle_actions.CheckAndHandleActions.__content_type">
+<code class="sig-name descname">__content_type</code><em class="property"> =</em><a class="headerlink" href="#faq_bot.check_and_handle_actions.CheckAndHandleActions.__content_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="faq_bot.check_and_handle_actions.CheckAndHandleActions.__content_post_back">
+<code class="sig-name descname">__content_post_back</code><em class="property"> =</em><a class="headerlink" href="#faq_bot.check_and_handle_actions.CheckAndHandleActions.__content_post_back" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="faq_bot.check_and_handle_actions.CheckAndHandleActions.__type">
+<code class="sig-name descname">__type</code><em class="property"> = none</em><a class="headerlink" href="#faq_bot.check_and_handle_actions.CheckAndHandleActions.__type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="faq_bot.check_and_handle_actions.CheckAndHandleActions.__handle">
+<code class="sig-name descname">__handle</code><a class="headerlink" href="#faq_bot.check_and_handle_actions.CheckAndHandleActions.__handle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="faq_bot.check_and_handle_actions.CheckAndHandleActions.__user_message">
+<code class="sig-name descname">__user_message</code><a class="headerlink" href="#faq_bot.check_and_handle_actions.CheckAndHandleActions.__user_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="faq_bot.check_and_handle_actions.CheckAndHandleActions.execute">
+<code class="sig-name descname">execute</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">body</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.check_and_handle_actions.CheckAndHandleActions.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verify the body parameter and execute handler.
+Please refer to the reference link of the function.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500901?lang=en">Common Message Property</a></p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">faq_bot</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, worksmobile.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../_sources/autoapi/faq_bot/check_and_handle_actions/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

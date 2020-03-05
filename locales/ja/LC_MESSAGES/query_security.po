@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-12-17 19:11+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:26
+msgid "Here are FAQs about security."
+msgstr "セキュリティに関するよくある質問です。"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:29
+msgid "Send a question"
+msgstr "担当者に問い合わせる"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:35
+msgid "See more"
+msgstr "詳しく見る"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:46
+msgid "I lost my access card."
+msgstr "出入証を紛失してしまいました。"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:47
+msgid "My access card has been damaged."
+msgstr "出入証を破損してしまいました。"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:48
+msgid "Can visitors enter the office?"
+msgstr "部外者が事務室に立ち入ることはできますか？"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:49
+msgid "I con’t remember my computer password."
+msgstr "パソコンのパスワードを思い出せません。"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:58
+msgid "Contact the Security Team to reissue your access card."
+msgstr "セキュリティチームに連絡していただくと、再発行をサポートいたします。"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:62
+msgid "Contact the Security Team in advance to gain access."
+msgstr "ご訪問前に予めセキュリティチームに連絡していただければ、部外者でも立ち入りが可能です。"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_security.py:63
+msgid "Contact the Security Team to change your computer password."
+msgstr "セキュリティチームに連絡していただくと、パソコンのパスワード変更をサポートいたします。"
+

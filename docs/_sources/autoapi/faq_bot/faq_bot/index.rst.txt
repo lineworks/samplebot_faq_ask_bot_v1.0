@@ -1,0 +1,52 @@
+:mod:`faq_bot.faq_bot`
+======================
+
+.. py:module:: faq_bot.faq_bot
+
+.. autoapi-nested-parse::
+
+   launch faq_bot
+
+
+
+Module Contents
+---------------
+
+.. function:: sig_handler(sig, _)
+
+   signal handler
+
+
+.. function:: kill_server()
+
+   stop the ioloop
+
+
+.. function:: init_logger()
+
+   Initializes the root logger settings.
+
+
+.. function:: start_faq_bot()
+
+   the faq_bot launch code
+
+   tornado.httpserver a non-blocking, single-threaded HTTP server.
+
+       reference
+       - `Common Message Property <https://www.tornadoweb.org/en/stable/httpserver.html>`_
+
+   tornado.routing flexible routing implementation.
+
+       reference
+       - `Common Message Property <https://www.tornadoweb.org/en/stable/routing.html>`_
+
+   If you use the event loop that comes with tornado, many third-party
+   packages based on asyncio may not be used, such as aioredis.
+
+   Message bot API overview.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/3005001?lang=en>`_
+
+

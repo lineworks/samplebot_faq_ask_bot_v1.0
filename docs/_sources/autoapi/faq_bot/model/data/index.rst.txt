@@ -1,0 +1,159 @@
+:mod:`faq_bot.model.data`
+=========================
+
+.. py:module:: faq_bot.model.data
+
+.. autoapi-nested-parse::
+
+   create message content
+
+
+
+Module Contents
+---------------
+
+.. function:: make_i18n_label(language, label)
+
+
+.. function:: i18n_display_text(language, display_text)
+
+
+.. function:: make_postback_action(data, label=None, i18n_labels=None, display_text=None, i18n_display_texts=None)
+
+   make post back action.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/1005050?lang=en>`_
+
+   :param data: post back string
+   :return: actions content
+
+
+.. function:: i18n_text(language, text)
+
+
+.. function:: make_message_action(post_back, label, i18n_labels=None, text=None, i18n_texts=None)
+
+   make message action.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/1005050?lang=en>`_
+
+   :param post_back: post back string
+   :return: actions content
+
+
+.. function:: make_url_action(label, url, i18n_labels=None)
+
+   make url action.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/1005050?lang=en>`_
+
+   :param url: User behavior will trigger the client to request this URL.
+   :return: actions content
+
+
+.. function:: make_normal_action(atype, label, i18n_labels=None)
+
+   Create camera, camera roll, location action.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/1005050?lang=en>`_
+
+   :param atype: action's type
+   :return: None
+
+
+.. function:: make_i18n_thumbnail_image_url(language, thumbnail_image_url)
+
+
+.. function:: make_quick_reply_item(action, url=None, image_resource_id=None, i18n_thumbnail_image_urls=None, i18n_image_resource_ids=None)
+
+   Create quick reply message item.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/100500807?lang=en>`_
+
+   :param action: The user clicks the quick reply button to trigger this action.
+   :return: quick reply content.
+
+
+.. function:: make_quick_reply(replay_items)
+
+   Create quick reply message.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/100500807?lang=en>`_
+
+   :param replay_items: Array of return object of make_quick_reply_item function.
+   :return: quick reply content.
+
+
+.. function:: make_text(text, i18n_texts=None)
+
+   make text.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/100500801?lang=en>`_
+
+   :return: text content.
+
+
+.. function:: make_i18n_image_url(language, image_url)
+
+
+.. function:: make_add_rich_menu(name, size, areas)
+
+   add rich menu content:
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/1005040?lang=en>`_
+
+   You can create a rich menu for the message bot by following these steps:
+   1. Image uploads: using the "Upload Content" API
+   2. Rich menu generation: using the "Register Message Rich Menu" API
+   3. Rich Menu Image Settings: Use the "Message Rich Menu Image Settings" API
+
+
+.. function:: make_i18n_content_texts(language, content_text)
+
+
+.. function:: make_carousel_column(text, actions, title=None, image_url=None, resource_id=None, default_action=None, i18n_image_urls=None, i18_resource_ids=None, i18n_texts=None, i18n_titles=None)
+
+   create carousel message column content.
+
+   reference
+   - `Common Message Property <https://developers.worksmobile.com/jp/document/100500808?lang=en>`_
+
+
+.. function:: make_carousel(columns, ratio=None, size=None)
+
+   create carousel message content.
+
+   reference
+   - `Common Message Property <https://developers.worksmobile.com/jp/document/100500808?lang=en>`_
+
+
+.. function:: make_i18n_title(language, title)
+
+
+.. function:: make_i18n_subtitle(language, subtitle)
+
+
+.. function:: make_list_template_element(title, subtitle=None, image=None, resource_id=None, action=None, i18n_titles=None, i18n_subtitles=None, i18n_images=None, i18n_resource_ids=None)
+
+   create carousel list template a Row.
+
+   reference
+   - `Common Message Property <https://developers.worksmobile.com/jp/document/100500805?lang=en>`_
+
+
+.. function:: make_list_template(elements, cover_data=None, actions=None)
+
+   create carousel list template.
+
+   reference
+   - `Common Message Property <https://developers.worksmobile.com/jp/document/100500805?lang=en>`_
+
+

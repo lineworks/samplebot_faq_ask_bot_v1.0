@@ -1,0 +1,49 @@
+:mod:`faq_bot.settings`
+=======================
+
+.. py:module:: faq_bot.settings
+
+.. autoapi-nested-parse::
+
+   the global setting for faq_bot
+
+
+
+Module Contents
+---------------
+
+.. data:: LOG_PATH
+   
+
+   
+
+.. data:: CALENDAR_LOG_FILE
+   
+
+   
+
+.. data:: CALENDAR_LOG_ROTATE
+   :annotation: = midnight
+
+   
+
+.. data:: CALENDAR_LOG_FMT
+   :annotation: = [%(asctime)-15s] [%(levelname)s] %(filename)s %(funcName)s:%(lineno)d %(process)d %(request_id).8s %(message)s
+
+   
+
+.. data:: CALENDAR_LOG_LEVEL
+   :annotation: = DEBUG
+
+   
+
+.. data:: CALENDAR_PORT
+   :annotation: = 8080
+
+   
+
+.. data:: CALENDAR_PID_FILE
+   
+
+   
+

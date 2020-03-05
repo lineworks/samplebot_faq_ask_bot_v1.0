@@ -1,0 +1,28 @@
+:mod:`faq_bot.router`
+=====================
+
+.. py:module:: faq_bot.router
+
+.. autoapi-nested-parse::
+
+   the url to handler route
+
+
+
+Module Contents
+---------------
+
+.. function:: getRouter()
+
+   get the app with route info
+
+       reference
+       - `Common Message Property <https://www.tornadoweb.org/en/stable/web.html>`_
+
+   StaticFileHandler is a simple handler that can serve static content
+   from a directory.
+
+       reference
+       - `Common Message Property <https://www.tornadoweb.org/en/stable/web.html#tornado.web.StaticFileHandler>`_
+
+

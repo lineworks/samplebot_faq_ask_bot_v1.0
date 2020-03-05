@@ -1,0 +1,29 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-12-17 19:01+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/model/i18n_data.py:21
+msgid "HR/Leave"
+msgstr "人事/休暇"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/model/i18n_data.py:22
+msgid "Welfare/Work support"
+msgstr "福利厚生/業務支援"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/model/i18n_data.py:23
+msgid "Security"
+msgstr "セキュリティ"
+

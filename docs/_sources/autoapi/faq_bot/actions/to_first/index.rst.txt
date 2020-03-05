@@ -1,0 +1,17 @@
+:mod:`faq_bot.actions.to_first`
+===============================
+
+.. py:module:: faq_bot.actions.to_first
+
+
+Module Contents
+---------------
+
+.. data:: _
+   
+
+   
+
+.. function:: to_first(account_id, __, ___)
+
+

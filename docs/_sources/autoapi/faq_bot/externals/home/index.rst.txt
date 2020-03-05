@@ -1,0 +1,51 @@
+:mod:`faq_bot.externals.home`
+=============================
+
+.. py:module:: faq_bot.externals.home
+
+.. autoapi-nested-parse::
+
+   Functions dealing with articles.
+
+
+
+Module Contents
+---------------
+
+.. function:: create_boards(board)
+
+   Create boards.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/100180201?lang=en>`_
+   :return: board no
+
+
+.. function:: get_boards(title=None)
+
+   Create boards.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/100180202?lang=en>`_
+
+   :return: If boards have been created, the information of boards no will be returned;
+           otherwise, none will be returned.
+
+
+.. function:: create_articles(title, type, content, account_id=None, attention_period_in_days=None)
+
+   Create articles.
+
+   reference
+   - `Common Message Property <https://developers.worksmobile.com/jp/document/100180301?lang=en>`_
+
+
+.. function:: init_board(local)
+
+   Initialize board. Check also: faq_bot/externals/richmenu.py
+   please check home API.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/1001801?lang=en>`_
+
+

@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>faq_bot.model.data &#8212; faq_bot  documentation</title>
+    <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-faq_bot.model.data">
+<span id="faq-bot-model-data"></span><h1><a class="reference internal" href="#module-faq_bot.model.data" title="faq_bot.model.data"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faq_bot.model.data</span></code></a><a class="headerlink" href="#module-faq_bot.model.data" title="Permalink to this headline">¶</a></h1>
+<p><p>create message content</p>
+</p>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="faq_bot.model.data.make_i18n_label">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_i18n_label</code><span class="sig-paren">(</span><em class="sig-param">language</em>, <em class="sig-param">label</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_i18n_label" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.i18n_display_text">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">i18n_display_text</code><span class="sig-paren">(</span><em class="sig-param">language</em>, <em class="sig-param">display_text</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.i18n_display_text" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_postback_action">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_postback_action</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">label=None</em>, <em class="sig-param">i18n_labels=None</em>, <em class="sig-param">display_text=None</em>, <em class="sig-param">i18n_display_texts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_postback_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>make post back action.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/1005050?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – post back string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>actions content</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.i18n_text">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">i18n_text</code><span class="sig-paren">(</span><em class="sig-param">language</em>, <em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.i18n_text" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_message_action">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_message_action</code><span class="sig-paren">(</span><em class="sig-param">post_back</em>, <em class="sig-param">label</em>, <em class="sig-param">i18n_labels=None</em>, <em class="sig-param">text=None</em>, <em class="sig-param">i18n_texts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_message_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>make message action.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/1005050?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>post_back</strong> – post back string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>actions content</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_url_action">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_url_action</code><span class="sig-paren">(</span><em class="sig-param">label</em>, <em class="sig-param">url</em>, <em class="sig-param">i18n_labels=None</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_url_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>make url action.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/1005050?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>url</strong> – User behavior will trigger the client to request this URL.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>actions content</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_normal_action">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_normal_action</code><span class="sig-paren">(</span><em class="sig-param">atype</em>, <em class="sig-param">label</em>, <em class="sig-param">i18n_labels=None</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_normal_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create camera, camera roll, location action.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/1005050?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>atype</strong> – action’s type</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_i18n_thumbnail_image_url">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_i18n_thumbnail_image_url</code><span class="sig-paren">(</span><em class="sig-param">language</em>, <em class="sig-param">thumbnail_image_url</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_i18n_thumbnail_image_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_quick_reply_item">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_quick_reply_item</code><span class="sig-paren">(</span><em class="sig-param">action</em>, <em class="sig-param">url=None</em>, <em class="sig-param">image_resource_id=None</em>, <em class="sig-param">i18n_thumbnail_image_urls=None</em>, <em class="sig-param">i18n_image_resource_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_quick_reply_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create quick reply message item.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500807?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>action</strong> – The user clicks the quick reply button to trigger this action.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>quick reply content.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_quick_reply">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_quick_reply</code><span class="sig-paren">(</span><em class="sig-param">replay_items</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_quick_reply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create quick reply message.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500807?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>replay_items</strong> – Array of return object of make_quick_reply_item function.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>quick reply content.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_text">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_text</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">i18n_texts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>make text.</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500801?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>text content.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_i18n_image_url">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_i18n_image_url</code><span class="sig-paren">(</span><em class="sig-param">language</em>, <em class="sig-param">image_url</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_i18n_image_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_add_rich_menu">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_add_rich_menu</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">size</em>, <em class="sig-param">areas</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_add_rich_menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>add rich menu content:</p>
+<blockquote>
+<div><p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/1005040?lang=en">Common Message Property</a></p>
+</div></blockquote>
+<p>You can create a rich menu for the message bot by following these steps:
+1. Image uploads: using the “Upload Content” API
+2. Rich menu generation: using the “Register Message Rich Menu” API
+3. Rich Menu Image Settings: Use the “Message Rich Menu Image Settings” API</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_i18n_content_texts">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_i18n_content_texts</code><span class="sig-paren">(</span><em class="sig-param">language</em>, <em class="sig-param">content_text</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_i18n_content_texts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_carousel_column">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_carousel_column</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">actions</em>, <em class="sig-param">title=None</em>, <em class="sig-param">image_url=None</em>, <em class="sig-param">resource_id=None</em>, <em class="sig-param">default_action=None</em>, <em class="sig-param">i18n_image_urls=None</em>, <em class="sig-param">i18_resource_ids=None</em>, <em class="sig-param">i18n_texts=None</em>, <em class="sig-param">i18n_titles=None</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_carousel_column" title="Permalink to this definition">¶</a></dt>
+<dd><p>create carousel message column content.</p>
+<p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500808?lang=en">Common Message Property</a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_carousel">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_carousel</code><span class="sig-paren">(</span><em class="sig-param">columns</em>, <em class="sig-param">ratio=None</em>, <em class="sig-param">size=None</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_carousel" title="Permalink to this definition">¶</a></dt>
+<dd><p>create carousel message content.</p>
+<p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500808?lang=en">Common Message Property</a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_i18n_title">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_i18n_title</code><span class="sig-paren">(</span><em class="sig-param">language</em>, <em class="sig-param">title</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_i18n_title" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_i18n_subtitle">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_i18n_subtitle</code><span class="sig-paren">(</span><em class="sig-param">language</em>, <em class="sig-param">subtitle</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_i18n_subtitle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_list_template_element">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_list_template_element</code><span class="sig-paren">(</span><em class="sig-param">title</em>, <em class="sig-param">subtitle=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">resource_id=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">i18n_titles=None</em>, <em class="sig-param">i18n_subtitles=None</em>, <em class="sig-param">i18n_images=None</em>, <em class="sig-param">i18n_resource_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_list_template_element" title="Permalink to this definition">¶</a></dt>
+<dd><p>create carousel list template a Row.</p>
+<p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500805?lang=en">Common Message Property</a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="faq_bot.model.data.make_list_template">
+<code class="sig-prename descclassname">faq_bot.model.data.</code><code class="sig-name descname">make_list_template</code><span class="sig-paren">(</span><em class="sig-param">elements</em>, <em class="sig-param">cover_data=None</em>, <em class="sig-param">actions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#faq_bot.model.data.make_list_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>create carousel list template.</p>
+<p>reference
+- <a class="reference external" href="https://developers.worksmobile.com/jp/document/100500805?lang=en">Common Message Property</a></p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../../index.html">faq_bot</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, worksmobile.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../../_sources/autoapi/faq_bot/model/data/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

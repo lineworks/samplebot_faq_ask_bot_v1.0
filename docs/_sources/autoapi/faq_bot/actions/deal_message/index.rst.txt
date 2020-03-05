@@ -1,0 +1,22 @@
+:mod:`faq_bot.actions.deal_message`
+===================================
+
+.. py:module:: faq_bot.actions.deal_message
+
+.. autoapi-nested-parse::
+
+   deal user input messages
+
+
+
+Module Contents
+---------------
+
+.. function:: deal_message(account_id, __, message)
+
+   Process messages manually entered by the user.
+
+   :param account_id: user account id.
+   :param message: user input message.
+
+

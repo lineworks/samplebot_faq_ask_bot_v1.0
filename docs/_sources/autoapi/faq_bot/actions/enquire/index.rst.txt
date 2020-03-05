@@ -1,0 +1,21 @@
+:mod:`faq_bot.actions.enquire`
+==============================
+
+.. py:module:: faq_bot.actions.enquire
+
+.. autoapi-nested-parse::
+
+   Handle user selection ask a person
+
+
+
+Module Contents
+---------------
+
+.. function:: enquire(account_id, __, ___)
+
+   This function handles the user's selection of ask a person
+
+   :param account_id: user account id.
+
+

@@ -1,0 +1,27 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-12-17 20:08+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#:
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/enquire_message.py:29
+msgid "You have selected {type}. Please write to me your question."
+msgstr "{type}を選択されました。お問い合わせ内容を入力してください。。"
+
+#:
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/enquire_message.py:34
+msgid "Only one message can be delivered. Please write your question at one go."
+msgstr "メッセージは1つのみ送信可能ですので、お問い合わせ内容は1度にすべて入力してください。"
+

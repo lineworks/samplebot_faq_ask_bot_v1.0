@@ -1,0 +1,36 @@
+:mod:`faq_bot.common.token`
+===========================
+
+.. py:module:: faq_bot.common.token
+
+.. autoapi-nested-parse::
+
+   Generate token according to JWT protocol
+
+
+
+Module Contents
+---------------
+
+.. function:: create_tmp_token(key_path, server_id)
+
+   This function use JWT protocol to creates a temporary token
+   for user authentication.
+
+   Focus on the "Server Token (ID Registration Style)" section of
+   the following documents.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/1002002?lang=en>`_
+
+
+.. function:: generate_token()
+
+   Using JWT protocol to create token.
+   Focus on the "Server Token (ID Registration Style)" section of
+   the following documents.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/1002002?lang=en>`_
+
+

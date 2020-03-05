@@ -1,0 +1,26 @@
+:mod:`faq_bot.actions.send`
+===========================
+
+.. py:module:: faq_bot.actions.send
+
+.. autoapi-nested-parse::
+
+   Process user confirmation message content
+
+
+
+Module Contents
+---------------
+
+.. data:: _
+   
+
+   
+
+.. function:: send(account_id, __, ___)
+
+   This function processes the content of the user confirmation message
+
+   :param account_id: user account.
+
+

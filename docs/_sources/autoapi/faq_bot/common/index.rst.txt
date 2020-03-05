@@ -1,0 +1,17 @@
+:mod:`faq_bot.common`
+=====================
+
+.. py:module:: faq_bot.common
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   global_data/index.rst
+   token/index.rst
+   utils/index.rst
+
+

@@ -1,0 +1,19 @@
+:mod:`faq_bot.externals`
+========================
+
+.. py:module:: faq_bot.externals
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   contacts/index.rst
+   home/index.rst
+   register_bot/index.rst
+   richmenu/index.rst
+   send_message/index.rst
+
+

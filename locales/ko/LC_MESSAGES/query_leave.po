@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-12-17 19:11+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:26
+msgid "Here are FAQs about HR and leave."
+msgstr "인사/휴가 관련 자주 묻는 질문입니다."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:29
+msgid "Send a question"
+msgstr "담당자에게 문의하기"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:34
+msgid "See more"
+msgstr "자세히 보기"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:45
+msgid "The types of leave."
+msgstr "휴가의 종류에는 무엇이 있나요?"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:46
+msgid "How many days of leave I have?"
+msgstr "휴가 잔여일수를 확인하고 싶어요"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:47
+msgid "To request a leave."
+msgstr "휴가를 신청하고 싶어요"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:48
+msgid "To cancel my leave."
+msgstr "휴가 신청을 취소하고 싶어요"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:59
+msgid "Types of leave are classified in the Labor Standards Act."
+msgstr "연차 유급휴가 등 근로기준법에 따른 휴가를 부여합니다."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:60
+msgid "The remaining days of your leave are on in-house browser."
+msgstr "사내 브라우저에서 사용 가능한 휴가를 확인할 수 있습니다."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:61
+msgid "You can request a leave via the in-house browser."
+msgstr "사내 브라우저에서 휴가를 신청할 수 있습니다."
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query_leave.py:62
+msgid "You can cancel your leave request via the in-house browser."
+msgstr "사내 브라우저에서 신청한 휴가를 취소할 수 있습니다."
+

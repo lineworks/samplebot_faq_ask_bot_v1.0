@@ -1,0 +1,34 @@
+:mod:`faq_bot.externals.send_message`
+=====================================
+
+.. py:module:: faq_bot.externals.send_message
+
+.. autoapi-nested-parse::
+
+   send message to user
+
+
+
+Module Contents
+---------------
+
+.. function:: push_message(account_id, content, header=None)
+
+   Send message to user. the package is the following JSON structure.
+
+       reference
+       - `Common Message Property <https://developers.worksmobile.com/jp/document/1005008?lang=en>`_
+
+   :param account_id: user account id
+   :param content: message content
+   :param header: http header
+
+
+.. function:: push_messages(account_id, contents)
+
+   Send multiple messages to users
+
+   :param account_id: user account id
+   :param contents: message content list
+
+

@@ -1,0 +1,21 @@
+:mod:`faq_bot.actions.query_welfare`
+====================================
+
+.. py:module:: faq_bot.actions.query_welfare
+
+.. autoapi-nested-parse::
+
+   Deals with user query welfare related problems
+
+
+
+Module Contents
+---------------
+
+.. function:: query_welfare(account_id, __, ___)
+
+   This function deals with user query welfare related problems.
+
+   :param account_id: user account id.
+
+

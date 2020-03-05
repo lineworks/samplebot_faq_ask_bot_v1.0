@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-12-17 19:11+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query.py:31
+msgid "See FAQs"
+msgstr "FAQを見る"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query.py:39
+msgid "HR/Leave"
+msgstr "人事/休暇"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query.py:40
+msgid "See FAQs about HR and leave."
+msgstr "人事及び休暇に関するよくある質問を確認できます。"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query.py:46
+msgid "Welfare/Work support"
+msgstr "福利厚生/業務支援"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query.py:47
+msgid "See FAQs about welfare and work support."
+msgstr "福利厚生及び業務支援に関するよくある質問を確認できます。"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query.py:54
+msgid "Security"
+msgstr "セキュリティ"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query.py:55
+msgid "See FAQs about security."
+msgstr "セキュリティに関するよくある質問を確認できます。"
+
+#: /home1/irteam/oneapp-samplebot-FAQ_bak/faq_bot/actions/query.py:72
+msgid "Please select an work-related item that you would like to know."
+msgstr "知りたい業務項目を選択してください。"
+
