@@ -73,8 +73,9 @@ API_BO = {
 
     "bot": "https://" + DEVELOP_API_DOMAIN + "/r/" + API_ID + "/message/v1/bot",
 
-    "contacts_url": "https://" + DEVELOP_API_DOMAIN + "/"
-                    + API_ID + "/contact/getDomainContact/v1",
+    "contacts_url": "https://" + DEVELOP_API_DOMAIN + "/r/"
+                    + API_ID
+                    + "/contact/v2/accounts/_USER_ACCOUNT_ID_",
 
     "auth_url": "https://" + AUTH_DOMAIN + "/b/"
                 + API_ID + "/server/token?grant_type=urn%3Aietf%3Aparams%3Ao"
