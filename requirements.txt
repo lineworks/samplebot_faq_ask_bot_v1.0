@@ -16,7 +16,7 @@ html2text==2019.9.26
 idna==2.6
 imagesize==1.1.0
 importlib-metadata==0.23
-Jinja2==2.10.3
+Jinja2==2.11.3
 jwcrypto==0.6.0
 lazy-object-proxy==1.4.3
 livereload==2.6.1
