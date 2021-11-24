@@ -23,15 +23,15 @@ import os
 DEFAULT_LANG = 'ja'
 
 # account
-ADMIN_ACCOUNT = "admin@xxx.com"
-DOMAIN_ID = 0
+ADMIN_ACCOUNT = "tecnoart@tecnoart"
+DOMAIN_ID = 10053603
 
 # api
-API_ID = "kr1EHxxxxfJVz"
-SERVER_CONSUMER_KEY = "To8SnC7sxxxxxjqXZhO"
+API_ID = "jp1ncZqDhKnDC"
+SERVER_CONSUMER_KEY = "gwqSxRALQ1pB8jT6Gw41"
 
-SERVER_ID = "96460cc1e778402xxxxxfe35fa97ce76"
-SECRET_KEY_NAME = "private_201xxxxx164308.key"
+SERVER_ID = "23ac6bf5c7d44ecd9f49dfa322d7fa99"
+SECRET_KEY_NAME = "private_20211124114855.key"
 
 # LOCAL ADDRESS
 LOCAL_ADDRESS = "https://[Heroku app name].herokuapp.com/"
