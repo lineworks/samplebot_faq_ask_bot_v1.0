@@ -20,7 +20,7 @@ See the official API documentation for more information.
 * [Korean](https://developers.worksmobile.com/document/10050700301?lang=ko)
 
 ## Reference
-[Click here](https://lineworks.github.io/samplebot_faq_ask_bot/) to see details on the FAQ Ask Bot's source code.
+[Click here](https://lineworks.github.io/samplebot_faq_ask_bot_v1.0/) to see details on the FAQ Ask Bot's source code.
 
 ## Furthur Inquiries
 Kindly leave a comment on Github Issues. 
