@@ -89,16 +89,6 @@ OPEN_API = {
     "consumerKey": SERVER_CONSUMER_KEY
 }
 
-# DB CONFIG
-DB_CONFIG = {
-    "host": DB_HOST,
-    "port": DB_PORT,
-    "dbname": DB_NAME,
-    "user": DB_USER,
-    "password": DB_PASSWORD,
-    "sslmode": "prefer"
-}
-
 # FILE SYSTEM
 FILE_SYSTEM = {
     "image_dir": ABSDIR_OF_PARENT+"/image",
