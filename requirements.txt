@@ -17,7 +17,7 @@ idna==2.6
 imagesize==1.1.0
 importlib-metadata==0.23
 Jinja2==2.10.3
-jwcrypto==0.6.0
+jwcrypto==1.4
 lazy-object-proxy==1.4.3
 livereload==2.6.1
 Mako==1.1.0
